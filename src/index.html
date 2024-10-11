@@ -28,11 +28,11 @@
 <body>
   <div class="fixed z-50 left-0 w-full bg-slate-50 top-0 h-[80px] ">
 
-    <div class="flex max-w-[1100px]  px-4 mx-auto justify-between items-center h-[80px]">
-      <div class="overflow-hidden w-[250px] ">
+    <div class="flex max-w-[1100px]  px-4 mx-auto justify-between items-center h-[80px] relative">
+      <div class="overflow-hidden w-[150px] sm:w-[250px] ">
         <img class="w-full h-full object-cover" src="./images/logo.svg" alt="logo-image">
       </div>
-      <div class="flex h-[100%] gap-4 items-center">
+      <div class="xxmd:flex hidden h-[100%] gap-4 items-center">
         <span
           class="relative px-2 transition-all duration-50 flex items-center h-full text-lg font-normal  hover:before:absolute 
         before:bottom-0 before:left-0 before:w-full before:h-[5px] before:bg-gradient-to-r before:from-limeGreen before:to-brightCyan before:content-['']">
@@ -65,14 +65,48 @@
         </span>
 
       </div>
-      <button class="bg-gradient-to-tr from-limeGreen to-brightCyan text-white rounded-full px-4 py-2">Request
+      <div id="navbar"
+        class="hidden xxmd:hidden p-8 items-start absolute top-[100%] left-0 w-full h-[90vh] gap-4  bg-gray-800/40">
+        <div class="bg-white p-6 flex flex-col w-full  " id="insideNav">
+          <span class="p-4 transition-all duration-50 flex items-center h-full text-lg font-normal hover:bg-gray-200 ">
+
+            <a class='text-center w-full' href=" #home">Home</a>
+          </span>
+          <span class="p-4 transition-all duration-50 flex items-center h-full text-lg font-normal hover:bg-gray-200 ">
+
+            <a class='text-center w-full' href=" #home">About</a>
+          </span>
+          <span class="p-4 transition-all duration-50 flex items-center h-full text-lg font-normal hover:bg-gray-200 ">
+
+            <a class='text-center w-full' href=" #home">Contact</a>
+          </span>
+          <span class="p-4 transition-all duration-50 flex items-center h-full text-lg font-normal hover:bg-gray-200 ">
+
+            <a class='text-center w-full' href=" #home">Blog</a>
+          </span>
+          <span class="p-4 transition-all duration-50 flex items-center h-full text-lg font-normal hover:bg-gray-200 ">
+
+            <a class='text-center w-full' href=" #home">Careers</a>
+          </span>
+
+        </div>
+
+      </div>
+      <button
+        class="hidden md:flex bg-gradient-to-tr from-limeGreen to-brightCyan text-white rounded-full px-4 py-2">Request
         invite</button>
+      <span class="inline-block md:hidden cursor-pointer" id="menu">
+        <i class="fa-solid fa-bars text-4xl"></i>
+      </span>
     </div>
   </div>
   <div class="relative">
-    <div class="w-[1100px] flex gap-2 mx-auto items-center h-[100vh]">
-      <div class="flex flex-col gap-4 w-[40%]">
-        <h2 class="text-[50px] text-slate-600 font-bold">Next generation digital banking</h2>
+    <div
+      class=" w-full lg:w-[1100px] flex gap-2 mx-auto flex-col-reverse items-center xmd:flex-row py-8  px-4 xmd:h-[100vh]">
+      <div class="flex flex-col gap-4 w-full xmd:w-[50%] lg:w-[40%] items-start">
+        <h2 class="text-4xl lg:text-[50px] text-slate-600 font-bold leading-snug lg:leading-loose">Next generation
+          digital banking
+        </h2>
         <p class="text-md">
           Take your financial life online. Your Easybank account will be a one-stop-shop
           for spending, saving, budgeting, investing, and much more.
@@ -83,18 +117,32 @@
             invite</button>
         </div>
       </div>
+      <div class="xmd:hidden relative overflow-hidden w-full h-[400px] xsm:h-[500px] justify-center  flex items-center">
 
+        <div class="absolute  overflow-hidden w-[600px] -left-14 -z-10  top-[-170px]">
+
+          <img class="bg-contain object-cover " src="./images/bg-intro-desktop.svg" alt="desktop-intro">
+        </div>
+        <div class="w-[90%] xsm:w-[70%] sm:w-[50%] mx-auto z-20 relative ">
+          <div class="absolute -top-32 left-4 ">
+
+            <img class=" object-contain w-full " src="./images/image-mockups.png" alt="image-mockup">
+          </div>
+        </div>
+        <!-- Content here -->
+
+      </div>
 
 
     </div>
-    <div class="z-10     w-[60%] absolute top-0 right-0 h-[120vh] overflow-hidden">
+    <div class="hidden xmd:flex z-10 w-[50%] lg:w-[60%] absolute top-0 right-0 h-[120vh] overflow-hidden">
       <div class="relative w-full">
 
         <div class="absolute overflow-hidden -top-20 -right-28">
 
           <img class="bg-cover object-cover " src="./images/bg-intro-desktop.svg" alt="deskto-intro">
         </div>
-        <div class="z-20  h-[90%] absolute  -top-16 -right-36">
+        <div class="z-20  h-[90%] absolute -top-2  md:-top-16 -right-36">
           <!-- Content here -->
           <img class=" object-cover w-[90%]  " src="./images/image-mockups.png" alt="image-mockup">
         </div>
@@ -104,13 +152,13 @@
   </div>
 
   <div class="bg-slate-100 py-16 -z-10">
-    <div class="w-[1100px] px-4 mx-auto">
+    <div class="max-w-[1100px] px-4 mx-auto">
       <h2 class="text-4xl text-gray-600 font-bold">Why choose Easybank?</h2>
       <p class="text-gray-400 text-md py-8">
         We leverage Open Banking to turn your bank account into your financial hub. Control
         your finances like never before.
       </p>
-      <div class="grid grid-cols-4 gap-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-6 lg:gap-4 py-8">
         <div class="flex flex-col gap-4">
           <div class="overflow-hidden w-[70px] h-[70px] rounded-full">
             <img class="w-full object-cover" src="./images/icon-online.svg" alt="online-icon">
@@ -158,10 +206,10 @@
     </div>
   </div>
   <div class="bg-slate-50 py-16">
-    <div class="w-[1100px] px-4 mx-auto">
+    <div class="max-w-[1100px] px-4 mx-auto">
 
       <h2 class="text-4xl font-light py-8">Latest Article</h2>
-      <div class="grid grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-6 lg:gap-4 py-8">
         <div class="flex flex-col bg-white gap-4">
           <div class="h-[200px] w-full overflow-hidden">
             <img class="object-cover w-full h-full" src="./images/image-currency.jpg" alt="currency">
@@ -226,9 +274,9 @@
     </div>
   </div>
   <div class="py-8 bg-darkBlue">
-    <div class="flex w-[1100px] mx-auto justify-between">
-      <div class="w-[60%] flex gap-2">
-        <div class="w-[50%] flex justify-between flex-col">
+    <div class="flex flex-col sm:flex-row gap-4 px-4 max-w-[1100px] mx-auto justify-between">
+      <div class="w-full sm:w-[60%] flex-col xsm:flex-row flex gap-4 xsm:gap-2">
+        <div class="w-full xsm:w-[50%] flex-col  gap-4 items-center xsm:items-start flex justify-between ">
           <div class="overflow-hidden w-[200px]">
             <img src="./images/logo_bank.PNG" alt="logo_footer">
           </div>
@@ -240,7 +288,7 @@
             <i class="fa-brands text-white hover:text-teal-400 cursor-pointer fa-pinterest"></i>
           </div>
         </div>
-        <div class="w-[50%] flex gap-8 justify-between">
+        <div class="w-full xsm:w-[50%] flex gap-8 justify-between">
           <div class="flex flex-col gap-4">
             <a href="#" class="text-white text-sm hover:text-teal-300">About Us</a>
             <a href="#" class="text-white text-sm hover:text-teal-300">Contact</a>
@@ -254,7 +302,7 @@
         </div>
 
       </div>
-      <div class="flex flex-col items-end gap-8">
+      <div class="flex flex-col items-center sm:items-end gap-8">
         <button class="bg-gradient-to-tr from-limeGreen to-brightCyan text-white rounded-full px-4 py-2">Request
           invite</button>
         <p class="text-gray-200"> © Easybank. All Rights Reserved</p>
@@ -263,30 +311,15 @@
 
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Ewuru Samson samicowest@gmail.com</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

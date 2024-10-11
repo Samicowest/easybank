@@ -16,6 +16,11 @@ module.exports = {
         sans: ["Public Sans", "sans-serif"],
         serif: ["Merriweather", "serif"],
       },
+      screens: {
+        xxmd: "900px",
+        xmd: "700px",
+        xsm: "402px",
+      },
     },
   },
   plugins: [],
